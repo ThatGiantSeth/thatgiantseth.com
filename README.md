@@ -1,1 +1,2 @@
-"# website" 
+# ThatGiantSeth.com
+## Personal Website
