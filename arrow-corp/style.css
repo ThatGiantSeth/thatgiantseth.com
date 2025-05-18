@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes fadeIn {
+    from {
+        filter:blur(10px);
+        transform: translateY(10vw);
+        opacity: 0;
+    }
+    to {
+        filter: none;
+        opacity: 1;
+    }
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans Display';
+    background-image: url("thumbnail2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	height: 100vh;
+    height: 100vh;
+    color: #cdd6f4;
+    overflow:hidden;
+}
+
+h1 {
+    color: #b1c3e0;
+}
+h3, h2 {
+    color: #3effa5;
+}
+p {
+    color: #ffffff;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+a {
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+.loginbutton {
+    background-color: #2897ff;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.main {
+    background-color: rgba(24, 25, 38, 0.9);
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    max-width:30vw;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+@media (orientation: portrait) {
+    .main {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
+}
+
+#profile-photo {
+    max-width: 70%;
+    max-height: auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(-45deg, #002d5b,#00a6ff,#002d5b);
+	background-size: 400% 400%;
+	animation: gradient 20s linear infinite;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.fields li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#title {
+    color: #74c7ec;
+}
+
+#subtitle {
+    color: #a6e3a1;
+}
+
+.main-text {
+    display: inline-block;
+}
+
+.footer {
+    font-size: 12px;
+    font-weight: bold;
+    color: #6c7086;
+}
+
+.footer a:hover {
+    color: #74c7ec;
+}
+
+#discordlink, #youtube {
+    color: #cdd6f4;
+    text-decoration: none;
+}
+
+#discordlink svg {
+    transition: transform 0.5s ease;
+}
+
+#discordlink svg:hover {
+    transform: scale(90%);
+}
+
+.discordinfo li a svg{
+    max-height: 30px;
+    max-width: 30px;
+    fill: #cdd6f4;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.discordinfo {
+    display: flex;
+        gap: 1rem;
+}
+

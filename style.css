@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes fadeIn {
+    from {
+        filter:blur(10px);
+        transform: translateY(10vw);
+        opacity: 0;
+    }
+    to {
+        filter: none;
+        opacity: 1;
+    }
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans Display';
+    background-image: url("assets/images/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #cdd6f4;
+    overflow:hidden;
+}
+
+a {
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.main {
+    background-color: rgba(24, 25, 38, 0.9);
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    max-width:30vw;
+    max-height: auto;
+    overflow: auto;
+}
+
+@media (orientation: portrait) {
+    .main {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
+}
+
+#profile-photo {
+    max-width: 250px;
+    max-height: auto;
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+hr {
+    max-width: 80%;
+}
+
+#title {
+    color: #74c7ec;
+}
+
+#subtitle {
+    color: #a6e3a1;
+}
+#subtitle2 {
+    color: #f9e2af;
+}
+
+.main-text {
+    display: inline-block;
+    max-width: 85%;
+}
+
+ul.buttons {
+    gap: 1rem;
+}
+
+.buttons li a svg {
+    max-height: 35px;
+    max-width: 35px;
+    border: 3px solid #74c7ec;
+    border-radius: 50%;
+    padding: 5px;
+    fill: #74c7ec;
+}
+
+.buttons li {
+    transition: transform 0.5s ease;
+}
+
+.buttons li:hover {
+    transform:skew(-8deg);
+}
+
+.buttons li a#youtube svg:hover {
+    fill: #f38ba8;
+    border-color: #f38ba8;
+}
+
+.buttons li a#github svg:hover {
+    fill: #a6e3a1;
+    border-color: #a6e3a1;
+}
+
+.buttons li a#pcparts svg:hover {
+    fill: #f9e2af;
+    border-color: #f9e2af;
+}
+
+#discordlink {
+    color: #cdd6f4;
+    text-decoration: none;
+}
+
+#discordlink svg {
+    transition: transform 0.5s ease;
+}
+
+#discordlink svg:hover {
+    transform: scale(90%);
+}
+
+.discordinfo li a svg{
+    max-height: 30px;
+    max-width: 30px;
+    fill: #cdd6f4;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.discordinfo {
+    display: flex;
+    gap: 1rem;
+}
+
+.coinlink li {
+    transition: transform 1s ease;
+}
+
+.coinlink img {
+    max-height: 50px;
+    max-width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.coinlink li:hover {
+    transform:rotateZ(15deg);
+    
+}
+
+.arrowlink img {
+    max-height: 50px;
+    max-width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.arrowlink li {
+    transition: transform 1s ease;
+}
+
+.arrowlink li:hover {
+    transform:scale(1.03);
+}
+
+.footer {
+    font-size: 12px;
+    font-weight: bold;
+    color: #6c7086;
+}
+
+.footer a:hover {
+    color: #74c7ec;
+}
