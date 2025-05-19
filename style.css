@@ -43,7 +43,7 @@ a {
     border-radius: 25px;
     padding: 40px;
     text-align: center;
-    max-width:30vw;
+    max-width: 30vw;
     max-height: auto;
     overflow: auto;
 }
@@ -136,6 +136,7 @@ ul.buttons {
 
 #discordlink svg:hover {
     transform: scale(90%);
+    fill: #89b4fa;
 }
 
 .discordinfo li a svg{
