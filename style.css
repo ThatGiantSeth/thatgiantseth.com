@@ -9,9 +9,14 @@
     }
 }
 
-html {
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
     font-family: 'Noto Sans Display';
 	background-color: #1e1e2e;
     background-position: center;
@@ -44,7 +49,7 @@ a {
     backdrop-filter: blur(1px);
     --webkit-backdrop-filter: blur(1px);
     border: 3px solid rgba(24, 25, 38, 0.35);
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     max-width: 30vw;
     max-height: 80vh;
@@ -113,10 +118,6 @@ ul {
     justify-content: center;
 }
 
-hr {
-    max-width: 80%;
-}
-
 #title {
     background: linear-gradient(-45deg, #fde8ee, #fdf6e7, #edf9eb, #e7f0fe);
     color: #1e1e2e;
@@ -127,6 +128,7 @@ hr {
     padding: 2% 4%;
     border-radius: 50px;
     z-index: 1;
+    margin-top: 5%;
 }
 
 #title h3 {
@@ -162,10 +164,12 @@ hr {
 #subtitle {
     color: rgb(215, 224, 254);
     margin: 2%;
+    user-select: text;
 }
 #subtitle2 {
     color: rgba(205, 214, 244);
     margin: 3%;
+    user-select: text;
 }
 
 .arrowdn, .arrowup {
@@ -197,6 +201,10 @@ hr {
     border: 1px solid rgba(205, 214, 244, 0.5);
     padding: 2% 4%;
     border-radius: 50px;
+}
+
+.main-text p {
+    user-select: text;
 }
 
 .buttons {
@@ -238,6 +246,14 @@ hr {
     border: 1px solid rgba(205, 214, 244, 0.3);
 }
 
+.buttons#open-buttons {
+    font-size: 13px;
+}
+
+.open-button {
+    cursor: pointer;
+}
+
 .buttons #youtube:hover svg{
     fill: #f38ba8;
     border-color: #f38ba8;
@@ -264,6 +280,7 @@ hr {
     padding: 1% 2%;
     border-radius: 50px;
     margin-top: 2rem;
+    user-select: text;
 }
 
 #discordlink {
@@ -295,6 +312,7 @@ hr {
 }
 
 .coinlink {
+    margin-top: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,7 +362,99 @@ hr {
     z-index: -2;
 }
 
-@media (max-width: calc(1.5 * 100vh)) {
+.window {
+    background-color: rgba(24, 25, 38, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    --webkit-backdrop-filter: blur(1px);
+    border: 3px solid rgba(24, 25, 38, 0.35);
+    text-align: center;
+    overflow: none;
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.4s;
+}
+
+.window .titlebar-text, .window .close-button {
+    user-select: none;
+}
+
+.window#music-window {
+    top: 5%;
+    left: 10%;
+}
+
+.window#games-window {
+    top: 5%;
+    right: 10%;
+}
+
+.window#projects-window {
+    bottom: 5%;
+    left: 10%;
+}
+
+.window#extra-window {
+    bottom: 5%;
+    right: 10%;
+}
+
+.window.closed {
+    display: none;
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    cursor: move;
+}
+
+.titlebar-text {
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.close-button {
+    height: 80%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.close-button :hover {
+    content: url(/assets/buttons/close-pressed.svg);
+}
+
+.title-bar .close-button img {
+    height: 100%;
+}
+
+.title-separation {
+    display: flex;
+    justify-content: center;
+}
+
+.title-separation hr {
+    width: 100%;
+}
+
+.spotify {
+    height: 100%;
+}
+
+.spotify iframe {
+    border-radius: 0 0 20px 20px;
+}
+
+@media (max-width: 150vh) {
     .main {
         max-width: 40vw;
     }

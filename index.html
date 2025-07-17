@@ -38,7 +38,7 @@
             <div class="box">
                 <section id="header">
                   <div class="profile-photo">
-                    <image src="assets/images/pc.jpg"></image>
+                    <image draggable="false" src="assets/images/pc.jpg"></image>
                   </div>
 
                 <h1 id="title">ThatGiantSeth</a></h1>
@@ -52,20 +52,26 @@
                   <a href="#header" class="arrowup"><img src="/assets/images/arrowup.svg"></a>
                   <div class="main-text">
                     <p>
-                        In my free time I really like to tinker with any sort of tech, especially building computers. I also like games, music, and books. My current games of choice are Overwatch and Minecraft. My favorite artists are Paramore, almost monday, Laufey, and pretty much anyone that makes future funk. I am currently reading whatever textbook I have to read for school, unfortunately.
+                        In my free time I really like to tinker with any sort of tech, especially building computers. I also love games, music, and books. Click one of the buttons below to learn more about me.
                     </p>
+                    <div class="buttons" id="open-buttons">
+                      <a class="open-button" id="music-open">Music</a>
+                      <a class="open-button" id="games-open">Games</a>
+                      <a class="open-button" id="projects-open">Projects</a>
+                      <a class="open-button" id="extra-open">Extras</a>
+                    </div>
                 </div>
                 <div class="discordinfo">
-                  <a id="discordlink" href="https://discord.com/users/411994450370232321"><svg><use href="#discord-icon"></use></svg>@thatgiantseth</a>
+                  <a draggable="false" id="discordlink" href="https://discord.com/users/411994450370232321"><svg><use href="#discord-icon"></use></svg>@thatgiantseth</a>
                 </div>
 
                 <div class="buttons">
-                      <a id="github" href="https://github.com/ThatGiantSeth"><svg><use href="#github-icon"></use></svg></a>
-                      <a id="pcparts" href="https://pcpartpicker.com/b/xXqp99"><svg><use href="#pcparts-icon"></use></svg></a>
-                      <a id="youtube" href="https://www.youtube.com/@ThatGiantSeth"><svg><use href="#youtube-icon"></use></svg></a>
+                      <a draggable="false" id="github" href="https://github.com/ThatGiantSeth"><svg><use href="#github-icon"></use></svg></a>
+                      <a draggable="false" id="pcparts" href="https://pcpartpicker.com/b/xXqp99"><svg><use href="#pcparts-icon"></use></svg></a>
+                      <a draggable="false" id="youtube" href="https://www.youtube.com/@ThatGiantSeth"><svg><use href="#youtube-icon"></use></svg></a>
                 </div>
                 <p class="footer">
-                    Site version 5.1<br><a href="https://catppuccin.com/">Catppuccin</a> color scheme used under the <a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE">MIT</a> license.<br>Super awesome background by <a href="https://github.com/FlipperDog">FlipperDog</a>.
+                    Site version 5.2<br><a href="https://catppuccin.com/">Catppuccin</a> color scheme used under the <a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE">MIT</a> license.<br>Super awesome background by <a href="https://github.com/FlipperDog">FlipperDog</a>.
                 </p>
                 <div class="coinlink">
                   <div class="coin">
@@ -76,9 +82,89 @@
 
             </div>
         </div>
+
+        <div class="window closed" id="music-window">
+          <div class="title-bar">
+            <div class="titlebar-text">
+              <h2>My favorite songs</h2>
+            </div>
+            <div class="close-button">
+              <img draggable="false" src="/assets/buttons/close-X.svg">
+            </div>
+          </div>
+          <div class="title-separation">
+            <hr>
+          </div>
+          <div class="spotify">
+            <iframe src="https://open.spotify.com/embed/playlist/5Wl2nPVgA49rXs8awpIU5E?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <div class="window closed" id="games-window">
+          <div class="title-bar">
+            <div class="titlebar-text">
+              <h2>Games</h2>
+            </div>
+            <div class="close-button">
+              <img draggable="false" src="/assets/buttons/close-X.svg">
+            </div>
+          </div>
+          <div class="title-separation">
+            <hr>
+          </div>
+          <div class="games-list">
+            <h1>placeholder</h1>
+            <img src="/assets/images/image02.png">
+          </div>
+        </div>
+
+        <div class="window closed" id="projects-window">
+          <div class="title-bar">
+            <div class="titlebar-text">
+              <h2>My projects</h2>
+            </div>
+            <div class="close-button">
+              <img draggable="false" src="/assets/buttons/close-X.svg">
+            </div>
+          </div>
+          <div class="title-separation">
+            <hr>
+          </div>
+          <div class="projects-list">
+            <h1>placeholder</h1>
+            <img src="/assets/images/image02.png">
+          </div>
+        </div>
+
+        <div class="window closed" id="extra-window">
+          <div class="title-bar">
+            <div class="titlebar-text">
+              <h2>Extras</h2>
+            </div>
+            <div class="close-button">
+              <img draggable="false" src="/assets/buttons/close-X.svg">
+            </div>
+          </div>
+          <div class="title-separation">
+            <hr>
+          </div>
+          <div class="extra-content">
+            <h1>placeholder</h1>
+            <img src="/assets/images/image02.png">
+          </div>
+        </div>
+        
       </div>
-	  
-	  
+
+	  <script src="windows.js"></script>
+    <script>
+      openWindow(document.getElementById('music-open'), document.getElementById('music-window'));
+      openWindow(document.getElementById('games-open'), document.getElementById('games-window'));
+      openWindow(document.getElementById('projects-open'), document.getElementById('projects-window'));
+      openWindow(document.getElementById('extra-open'), document.getElementById('extra-window'));
+    </script>
+
+
 	  <script src="animBackground.js"></script>
     </body>
 </html>
