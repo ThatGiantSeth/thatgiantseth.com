@@ -49,23 +49,22 @@
                 <a href="#main-content" class="arrowdn"><img src="/assets/images/arrowdown.svg"></a>
               </section>
                 <section id="main-content">
-                  <a href="#header" class="arrowup"><img src="/assets/images/arrowup.svg"></a>
+                  <a href="#header" class="arrowup"><img draggable="false" src="/assets/images/arrowup.svg"></a>
                   <div class="main-text">
                     <p>
-                        In my free time I really like to tinker with any sort of tech, especially building computers. I also love games, music, and books. Click one of the buttons below to learn more about me.
+                        In my free time I really like to tinker with any sort of tech, especially building computers. I also love games, music, and books. Click below if you want to learn more about me!
                     </p>
                     <div class="buttons" id="open-buttons">
                       <a class="open-button" id="music-open">Music</a>
-                      <a class="open-button" id="games-open">Games</a>
+                      <!-- <a class="open-button" id="games-open">Games</a> -->
                       <a class="open-button" id="projects-open">Projects</a>
                       <a class="open-button" id="extra-open">Extras</a>
                     </div>
                 </div>
-                <div class="discordinfo">
-                  <a draggable="false" id="discordlink" href="https://discord.com/users/411994450370232321"><svg><use href="#discord-icon"></use></svg>@thatgiantseth</a>
-                </div>
 
                 <div class="buttons">
+                      <a draggable="false" id="discordlink-mobile" href="https://discord.com/users/411994450370232321"><svg><use href="#discord-icon"></use></svg></a>
+                      <a draggable="false" id="discordlink" href="https://discord.com/users/411994450370232321"><svg><use href="#discord-icon"></use></svg>@thatgiantseth</a>
                       <a draggable="false" id="github" href="https://github.com/ThatGiantSeth"><svg><use href="#github-icon"></use></svg></a>
                       <a draggable="false" id="pcparts" href="https://pcpartpicker.com/b/xXqp99"><svg><use href="#pcparts-icon"></use></svg></a>
                       <a draggable="false" id="youtube" href="https://www.youtube.com/@ThatGiantSeth"><svg><use href="#youtube-icon"></use></svg></a>
@@ -75,9 +74,36 @@
                 </p>
                 <div class="coinlink">
                   <div class="coin">
-                      <a href="https://www.youtube.com/watch?v=EuIcDAevwuI"><img src="assets/images/image02.png" alt="Click Me"/></a>
+                      <a href="https://www.youtube.com/watch?v=EuIcDAevwuI"><img draggable="false" src="assets/images/image02.png" alt="Click Me"/></a>
                   </div>
                 </div>
+                <a href="#projects-section" class="arrowdn"><img draggable="false" src="/assets/images/arrowdown.svg"></a>
+                </section>
+
+                <section class="about-section" id="projects-section">
+                  <a href="#main-content" class="arrowup"><img draggable="false" src="/assets/images/arrowup.svg"></a>
+                  <h1 class="extras-title">Projects</h1>
+                  <a href="#music-section" class="arrowdn"><img draggable="false" src="/assets/images/arrowdown.svg"></a>
+                </section>
+
+                <section class="about-section" id="music-section">
+                  <a href="#projects-section" class="arrowup"><img draggable="false" src="/assets/images/arrowup.svg"></a>
+                  <h1 class="extras-title">Favorite music</h1>
+                  <div class="section-spotify">
+                    <iframe src="https://open.spotify.com/embed/playlist/5Wl2nPVgA49rXs8awpIU5E?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                  </div>
+                  <a href="#extras-section" class="arrowdn"><img draggable="false" src="/assets/images/arrowdown.svg"></a>
+                </section>
+
+                <!-- <section class="about-section" id="games-section">
+                  <a href="#music-section" class="arrowup"><img draggable="false"src="/assets/images/arrowup.svg"></a>
+                  <h1 class="extras-title">Favorite games</h1>
+                  <a href="#extras-section" class="arrowdn"><img draggable="false" src="/assets/images/arrowdown.svg"></a>
+                </section> -->
+
+                <section class="about-section" id="extras-section">
+                  <a href="#music-section" class="arrowup"><img draggable="false" src="/assets/images/arrowup.svg"></a>
+                  <h1 class="extras-title">Extras</h1>
                 </section>
 
             </div>
@@ -100,7 +126,7 @@
           </div>
         </div>
 
-        <div class="window closed" id="games-window">
+        <!-- <div class="window closed" id="games-window">
           <div class="title-bar">
             <div class="titlebar-text">
               <h2>Games</h2>
@@ -116,7 +142,7 @@
             <h1>placeholder</h1>
             <img src="/assets/images/image02.png">
           </div>
-        </div>
+        </div> -->
 
         <div class="window closed" id="projects-window">
           <div class="title-bar">
@@ -159,7 +185,7 @@
 	  <script src="windows.js"></script>
     <script>
       openWindow(document.getElementById('music-open'), document.getElementById('music-window'));
-      openWindow(document.getElementById('games-open'), document.getElementById('games-window'));
+      // openWindow(document.getElementById('games-open'), document.getElementById('games-window'));
       openWindow(document.getElementById('projects-open'), document.getElementById('projects-window'));
       openWindow(document.getElementById('extra-open'), document.getElementById('extra-window'));
     </script>

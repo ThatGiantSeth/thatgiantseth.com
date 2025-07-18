@@ -65,6 +65,9 @@ function blobHide(ind, set) {
 document.getElementById("discordlink").addEventListener("mouseenter", () => blobHide(0, 0));
 document.getElementById("discordlink").addEventListener("mouseleave", () => blobHide(0, 1));
 
+document.getElementById("discordlink-mobile").addEventListener("mouseenter", () => blobHide(0, 0));
+document.getElementById("discordlink-mobile").addEventListener("mouseleave", () => blobHide(0, 1));
+
 document.getElementById("github").addEventListener("mouseenter", () => blobHide(1, 0));
 document.getElementById("github").addEventListener("mouseleave", () => blobHide(1, 1));
 

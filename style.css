@@ -199,7 +199,7 @@ ul {
     display: inline-block;
     max-width: 85%;
     border: 1px solid rgba(205, 214, 244, 0.5);
-    padding: 2% 4%;
+    padding: 20px;
     border-radius: 50px;
 }
 
@@ -272,44 +272,51 @@ ul {
 #discordlink {
     color: #cdd6f4;
     text-decoration: none;
-    background: rgba(17, 17, 27, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.4px);
-    -webkit-backdrop-filter: blur(4.4px);
-    border: 1px solid rgba(17, 17, 27, 0.4);
     padding: 1% 2%;
-    border-radius: 50px;
-    margin-top: 2rem;
     user-select: text;
+    width: fit-content;
+    height: 50px;
 }
 
 #discordlink {
     transition: transform 0.5s ease;
 }
 
-#discordlink:hover {
+#discordlink:hover, #discordlink-mobile:hover {
     transform: scale(120%);
     background: rgba(205, 214, 244, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(205, 214, 244, 0.3);
 }
 
-#discordlink:hover svg {
+#discordlink:hover svg, #discordlink-mobile:hover svg {
     fill: #89b4fa;
 }
 
-.discordinfo svg{
-    max-height: 30px;
-    max-width: 30px;
+#discordlink svg{
+    height: 30px;
+    width: 30px;
     fill: #cdd6f4;
     padding-right: 5px;
     vertical-align: middle;
 }
 
-.discordinfo {
+#discordlink-mobile {
+    display: none;
+}
+
+#mobile-open-buttons {
+    display: none;
+}
+
+#mobile-open-buttons a {
+    width: 80%;
+}
+
+/* .discordinfo {
     display: flex;
     justify-content: center;
-}
+} */
 
 .coinlink {
     margin-top: 1%;
@@ -339,10 +346,24 @@ ul {
     font-size: 12px;
     font-weight: bold;
     color: #a6adc8;
+    margin-top: 10px;
 }
 
 .footer a:hover {
     color: #89b4fa;
+}
+
+#more-about {
+    display: none;
+}
+
+.extras-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-spotify {
+    height: 60%;
 }
 
 @keyframes move {
@@ -371,8 +392,8 @@ ul {
     border: 3px solid rgba(24, 25, 38, 0.35);
     text-align: center;
     overflow: none;
-    width: 400px;
-    height: 500px;
+    width: 15%;
+    height: 35%;
     position: fixed;
     padding: 0;
     margin: 0;
@@ -454,9 +475,13 @@ ul {
     border-radius: 0 0 20px 20px;
 }
 
-@media (max-width: 150vh) {
+.about-section {
+    display: none;
+}
+
+@media (max-width: 180vh) {
     .main {
-        max-width: 40vw;
+        max-width: 50vw;
     }
 
 }
@@ -469,6 +494,7 @@ ul {
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
     }
+    
     /* .profile-photo img {
         max-width: 80%;
     }
@@ -476,6 +502,26 @@ ul {
     .profile-photo::before {
         max-width: 80%;
     } */
+
+    #discordlink {
+        display: none;
+    }
+
+    #discordlink-mobile {
+        display: flex;
+    }
+
+    .buttons#open-buttons {
+        display: none;
+    }
+
+    #mobile-open-buttons {
+        display: flex;
+    }
+
+    .about-section {
+        display: block;
+    }
 
     section {
         height: 90vh;
@@ -485,6 +531,10 @@ ul {
         padding: 0;
         margin: 0;
         scroll-snap-align: center;
+    }
+
+    #more-about {
+        display: flex;
     }
 
     .footer {
