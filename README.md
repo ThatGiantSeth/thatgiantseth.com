@@ -1,7 +1,7 @@
 # thatgiantseth.com
-Personal Website | Version 5.1
+Personal Website | Version 7.0
 
-Each subfolder contains all files for a given subpage.
+VERY under construction! React rewrite in progress.
 
 ### Special thanks to:
-[Flipperdog](https://github.com/FlipperDog) for the background
+[Flipperdog](https://github.com/FlipperDog) for the original background
