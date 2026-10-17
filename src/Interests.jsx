@@ -13,15 +13,15 @@ const interests = [
                         <h3><a href="https://github.com/ThatGiantSeth/skeleton-reID" target="_blank">Skeleton Re-ID on Raspberry Pi</a></h3>
                         <h4>August 2025 - May 2026</h4>
                     </div>
-                    <ul>
-                        <li>Trained a lightweight convolutional neural network to identify humans from 3D skeleton data captured by an RGB-D camera, achieving 75% recognition accuracy during live testing.</li>
-                        <li>Deployed the trained network on an inexpensive Raspberry Pi 4 microcomputer that consumes under 10 W.</li>
-                        <li>Implemented an asynchronous client-server pipeline that kept total identification latency below 100 ms.</li>
-                        <li>Built a Qt5 UI to visualize real-time skeletons at 30 FPS and display identification results.</li>
-                        <li>Developed an integrated recording and training pipeline to allow seamless dataset expansion.</li>
-                        <li>Authored detailed documentation that enabled our project mentor to independently recreate our results.</li>
-                    </ul>
                     <img src={skeletonPhoto}/>
+                    <ul>
+                        <li>Integrated a lightweight convolutional neural network, Raspberry Pi microcomputer, and RGB-D camera to create a real-time skeleton re-ID system, achieving 75% recognition accuracy during live testing</li>
+                        <li>Developed a modular client-server architecture in Python that enables future research with newer camera hardware or different ML models</li>
+                        <li>Implemented buffering and packaging with asyncio and NumPy to reduce data transmission frequency while keeping total identification latency under 100 ms</li>
+                        <li>Built a GUI with Qt5 for real-time skeleton data and identification result visualization at a consistent 30 FPS</li>
+                        <li>Created a CLI-based recording and training pipeline to allow dataset expansion and customization</li>
+                        <li>Authored detailed technical documentation that enabled the team mentor to achieve similar results</li>
+                    </ul>
                 </div>
 
                 <hr />
@@ -32,10 +32,10 @@ const interests = [
                         <h4>August 2025 - December 2025</h4>
                     </div>
                     <ul>
-                        <li>Collaborated in an Agile-based team environment by attending stand-ups, writing user stories, practicing TDD, and drafting a software requirements specification.</li>
-                        <li>Trained an SVM classifier to categorize documents using TF-IDF features, achieving 70% average accuracy.</li>
-                        <li>Built a Java CLI application to parse PDFs, extract text, and display predicted categories.</li>
-                        <li>Implemented CI/CD with GitHub Actions, build management with Gradle, and unit testing with JUnit.</li>
+                        <li>Collaborated in a fast-paced Agile environment by attending stand-ups, drafting software specifications, and ensuring that each phase of the project was delivered on time</li>
+                        <li>Built a cross-platform Java application to parse PDFs, extract text, and display predicted categories in a CLI</li>
+                        <li>Developed custom training filters that improved the prediction model’s accuracy from 40% to 70%</li>
+                        <li>Integrated CI/CD with GitHub Actions, build management with Gradle, and unit testing with Junit to create a maintainable project ecosystem</li>
                     </ul>
                 </div>
 
@@ -47,10 +47,10 @@ const interests = [
                         <h4>August 2025 - December 2025</h4>
                     </div>
                     <ul>
-                        <li>Designed a MIPS-based single-cycle processor in VHDL that supports 7 instructions, 8 registers, and 512 bytes each of data and instruction memory.</li>
-                        <li>Constructed an ALU that supports addition, subtraction, multiplication, and value pass-through.</li>
-                        <li>Developed a data path by hand, including PC, registers, ALU, instruction and data memories, and control unit.</li>
-                        <li>Built VHDL testbenches to verify the data path’s correctness, including edge cases like value overflow.</li>
+                        <li>Designed a MIPS-based single-cycle processor in VHDL that supports 7 instructions, 8 registers, and 512 bytes each of data and instruction memory</li>
+                        <li>Developed logical data path schematics including program counter, registers, ALU, and control unit</li>
+                        <li>Constructed and integrated an ALU that supports addition, subtraction, multiplication, and value pass-through</li>
+                        <li>Authored VHDL testbenches to verify each component and troubleshoot edge cases like value overflow</li>
                     </ul>
                 </div>
             </div>
@@ -74,7 +74,7 @@ const interests = [
         title: "Favorite Games",
         content: (
             <>
-                <h1>Placeholder Text</h1>
+                <h1>Under construction :)</h1>
                 <img src={coin} />
             </>
         ),
@@ -87,7 +87,7 @@ const interests = [
         title: "Extras",
         content: (
             <>
-                <h1>Placeholder Text</h1>
+                <h1>Under construction :)</h1>
                 <img src={coin} />
             </>
         ),
