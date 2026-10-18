@@ -35,13 +35,13 @@ export const YouTubeIcon = () => (
 )
 
 export const UpArrow = ({ dest }) => (
-    <a href={dest} class="arrowup"><img draggable="false" src={arrowUp} /></a>
+    <a href={dest} className="arrowup" aria-label="Go to previous section"><img draggable="false" src={arrowUp} alt="" /></a>
 );
 
 export const DnArrow = ({ dest }) => (
-    <a href={dest} class="arrowdn"><img draggable="false" src={arrowDn} /></a>
+    <a href={dest} className="arrowdn" aria-label="Go to next section"><img draggable="false" src={arrowDn} alt="" /></a>
 );
 
 export const CloseBtn = () => (
-    <img draggable="false" src={closeBtn} />
+    <img draggable="false" src={closeBtn} alt="" />
 );

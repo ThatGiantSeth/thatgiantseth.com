@@ -81,7 +81,7 @@ a {
     border-radius: 50px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1px);
-    --webkit-backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border: 3px solid rgba(24, 25, 38, 0.35);
     padding: clamp(12px, 2vw, 30px);
     text-align: center;
@@ -220,6 +220,8 @@ ul {
 
 .arrowdn img, .arrowup img {
     width: 30%;
+    height: auto;
+    display: block;
     fill: white;
     transition: transform 0.2s ease-in-out;
 }
@@ -252,10 +254,18 @@ ul {
 
 .buttons a svg, .buttons button svg {
     display: flex;
+    width: 35px;
+    height: 35px;
     max-height: 35px;
     max-width: 35px;
     border-radius: 50%;
     fill: #cdd6f4;
+    color: #cdd6f4;
+    flex: 0 0 auto;
+}
+
+.buttons a svg path, .buttons button svg path {
+    fill: currentColor;
 }
 
 .buttons a, .buttons button {
@@ -417,7 +427,7 @@ ul {
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1px);
-    --webkit-backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border: 3px solid rgba(24, 25, 38, 0.35);
     text-align: center;
     overflow: hidden;
@@ -662,6 +672,10 @@ ul {
 }
 
 @media (max-width: 768px){
+    #animBackground {
+        filter: blur(20px);
+    }
+
     .box {
         width: 90vw;
         height: 90vh;
@@ -669,6 +683,8 @@ ul {
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         display: block;
+        -webkit-backdrop-filter: blur(0.5px);
+        backdrop-filter: blur(0.5px);
     }
 
     section {

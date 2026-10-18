@@ -9,7 +9,7 @@ const interests = [
         content: (
             <div className="projects-list">
                 <div className="project">
-                    <div class="project-title">
+                    <div className="project-title">
                         <h3><a href="https://github.com/ThatGiantSeth/skeleton-reID" target="_blank">Skeleton Re-ID on Raspberry Pi</a></h3>
                         <h4>August 2025 - May 2026</h4>
                     </div>

@@ -29,7 +29,9 @@ function Background({ isMobile, discordRef, githubRef, pcPartsRef, youtubeRef })
     const alphaTarget = [1, 1, 1, 1]
 
     const resize = () => {
-      const pixelRatio = window.devicePixelRatio || 1
+      const pixelRatio = isMobile
+        ? Math.min(window.devicePixelRatio || 1, 1.5)
+        : window.devicePixelRatio || 1
       width = window.innerWidth
       height = window.innerHeight
       canvas.width = width * pixelRatio
@@ -108,7 +110,8 @@ function Background({ isMobile, discordRef, githubRef, pcPartsRef, youtubeRef })
     mouseX = width / 2
     mouseY = height / 2
 
-    for (let index = 0; index < 50; index += 1) {
+    const particleCount = isMobile ? 24 : 50
+    for (let index = 0; index < particleCount; index += 1) {
       particles.push(new Particle(
         (Math.random() * width / 250) + index * width / 60,
         Math.random() * Math.PI * 2,
@@ -117,7 +120,14 @@ function Background({ isMobile, discordRef, githubRef, pcPartsRef, youtubeRef })
       ))
     }
 
-    const draw = () => {
+    let lastFrameTime = 0
+    const draw = (timestamp) => {
+      if (isMobile && timestamp - lastFrameTime < 33) {
+        animationFrame = window.requestAnimationFrame(draw)
+        return
+      }
+
+      lastFrameTime = timestamp
       context.clearRect(0, 0, width, height)
       frame += 0.3
       blobRadius *= 0.98
